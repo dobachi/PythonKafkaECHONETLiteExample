@@ -20,6 +20,22 @@ $ jupyter-lab
 
 * BasicExampleOfKafka.ipynb
 
+## Basic Example of Kafka clinet to write data of ECHONET Lite
+
+```shell
+$ jupyter-lab
+```
+
+* BasicExampleOfKafkaECHONETLite.ipynb
+
+## Basic Example to write data into Delta Lake
+
+```shell
+$ jupyter-lab
+```
+
+* IngestDataToDeltaLake.ipynb
+
 ## References
 
 * [Confluent Python Client]
