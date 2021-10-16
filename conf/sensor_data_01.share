@@ -1,0 +1,5 @@
+{
+  "shareCredentialsVersion": 1,
+  "endpoint": "http://localhost:8081/sensor_data_01",
+  "bearerToken": ""
+}
