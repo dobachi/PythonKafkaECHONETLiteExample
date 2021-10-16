@@ -130,3 +130,5 @@ dmypy.json
 
 .profile
 metastore_db
+
+data/power_grid_sample.csv
