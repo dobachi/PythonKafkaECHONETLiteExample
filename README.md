@@ -107,6 +107,24 @@ PythonのApache Kafkaクライアントを利用してストリームデータ�
 
 [BasicExampleSensorDataAnalysis.ipynb]: http://el01:8888/lab/tree/BasicExampleSensorDataAnalysis.ipynb
 
+## 電力需給のダミーデータを作成するヘルパー
+
+[GenerateDummyPowerGridData.ipynb]
+
+元ネタとして、電力会社の提供するでんき予報のようなデータを利用し、1分ごとのそれっぽいランダム値のダミーデータを生成するノートブックです。
+Delta LakeやDelta Sharingを利用してデータ分析ライクなことを試す際、データ量が少ないとさみしいので水増しのために利用するものです。
+
+[GenerateDummyPowerGridData.ipynb]: https://github.com/dobachi/PythonKafkaECHONETLiteExample/blob/main/GenerateDummyPowerGridData.ipynb
+
+## エアコンから読み取ったようなダミーデータを作成するヘルパー
+
+[GenerateRandomSensorData.ipynb]
+
+ECHONET Lite等を利用し、エアコンから電源状態、温度設定の情報を取得し、テキトーなデバイスIDっぽいものを付与したようなダミーデータを生成するノートブックです。
+Delta LakeやDelta Sharingを利用してデータ分析ライクなことを試す際、データ量が少ないとさみしいので水増しのために利用するものです。
+
+[GenerateRandomSensorData.ipynb]: https://github.com/dobachi/PythonKafkaECHONETLiteExample/blob/main/GenerateRandomSensorData.ipynb
+
 ## （参考）Apache KafkaにPythonを用いてデータを書き込む例
 
 [BasicExampleOfKafka.ipynb]
@@ -116,22 +134,22 @@ PythonのApache Kafkaクライアントを利用してストリームデータ�
 [BasicExampleOfKafka.ipynb]: https://github.com/dobachi/PythonKafkaECHONETLiteExample/blob/main/BasicExampleOfKafka.ipynb
 [Confluent Kafka Python]: https://docs.confluent.io/ja-jp/clients-confluent-kafka-python/1.5.0/overview.html
 
-## Basic Example of Delta Sharing client
+## （参考）Delta Sharingがストリームデータとしての読み込みに対応していないことを確認する例
 
-BasicExampleDeltaShring.ipynb
+[BasicExampleOfStreamFromDeltaSharing.ipynb]
 
-## Helper Notebook to Transform Power Grid Data
+Delta Sharingは2021/10現在、ストリームデータの読み出しに対応してない。
+それを確かめる簡単な例。
 
-GenerateDummyPowerGridData.ipynb
+[BasicExampleOfStreamFromDeltaSharing.ipynb]: https://github.com/dobachi/PythonKafkaECHONETLiteExample/blob/main/BasicExampleOfStreamFromDeltaSharing.ipynb
 
-This notebook generates a dummy data of the power grid data referencing the real data.
-You can obtain the real data from power grid's web site.
+## （参考）Delta Sharingクライアントの簡単な例
 
-## Dummy Data of Power Grid
+[BasicExampleDeltaShring.ipynb]
 
-`data/power_grid_dummydata` is a dummy data of power grid data.
-The format is Delta Lake.
-This is not real data but dummy data and generated referencing to the power grid data.
+Delta Sharingサーバが起動している前提で、そこにアクセスする簡単な例。
+
+[BasicExampleDeltaShring.ipynb]: https://github.com/dobachi/PythonKafkaECHONETLiteExample/blob/main/BasicExampleDeltaShring.ipynb
 
 ## References
 
